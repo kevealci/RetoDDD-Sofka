@@ -2,6 +2,7 @@ package com.retoddd.delivery.domain.restaurante;
 
 import co.com.sofka.domain.generic.EventChange;
 import com.retoddd.delivery.domain.restaurante.events.*;
+import com.retoddd.delivery.domain.restaurante.values.EstacionId;
 
 import java.util.HashSet;
 
@@ -12,6 +13,7 @@ public class RestauranteChange extends EventChange {
         apply( (RestauranteCreado event) -> {
             restaurante.informacion = event.getInformacion();
             restaurante.ventas = new HashSet<>();
+            restaurante.estacion = new Estacion(EstacionId.of("aaaa"));
         });
 
         apply( (VentaAgregada event) -> {

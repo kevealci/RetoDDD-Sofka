@@ -14,6 +14,10 @@ public class Entrega extends Entity<EntregaId> {
     private Status status;
     private Direccion direccion;
 
+    public Entrega(EntregaId entregaId) {
+        super(entregaId);
+    }
+
     public Entrega(EntregaId entregaId, Repartidor repartidor, Status status, Direccion direccion) {
         super(entregaId);
         this.repartidor = repartidor;

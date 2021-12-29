@@ -12,6 +12,10 @@ public class Estacion extends Entity<EstacionId> {
     private Actividad actividad;
     private Detalle detalle;
 
+    public Estacion(EstacionId estacionId) {
+        super(estacionId);
+    }
+
     public Estacion(EstacionId estacionId, Actividad actividad, Detalle detalle) {
         super(estacionId);
         this.actividad = actividad;

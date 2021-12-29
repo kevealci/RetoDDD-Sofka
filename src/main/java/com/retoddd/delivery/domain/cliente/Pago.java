@@ -10,6 +10,11 @@ public class Pago extends Entity<PagoId> {
     private Efectivo efectivo;
     private Tarjeta tarjeta;
 
+    public Pago(PagoId pagoId) {
+        super(pagoId);
+
+    }
+
     public Pago(PagoId pagoId, Efectivo efectivo, Tarjeta tarjeta) {
         super(pagoId);
         this.efectivo = efectivo;
